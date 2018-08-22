@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/appbar" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    style="@style/EditTextCard"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:text="@string/label_entity_name"
+                        style="@style/TextViewLabel.EditText"/>
+
+                        <EditText
+                            android:id="@+id/edtName"
+                            style="@style/EditText"
+                            android:hint="@string/hint_entity_name"
+                            android:inputType="textCapSentences"
+                            android:maxLines="1" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView style="@style/EditTextCard">
+
+                    <TextView
+                        android:text="@string/label_entity_description"
+                        style="@style/TextViewLabel.EditText"/>
+
+                        <EditText
+                            android:id="@+id/edtDescription"
+                            style="@style/EditText"
+                            android:hint="@string/hint_entity_description"
+                            android:inputType="textCapSentences"
+                            android:maxLines="1" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView style="@style/EditTextCard">
+
+                    <TextView
+                        android:text="@string/label_entity_quantity"
+                        style="@style/TextViewLabel.EditText"/>
+
+                        <EditText
+                            android:id="@+id/edtQuantity"
+                            style="@style/EditText"
+                            android:hint="@string/hint_entity_quantity"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView style="@style/EditTextCard">
+
+                    <TextView
+                        android:text="@string/label_entity_price"
+                        style="@style/TextViewLabel.EditText"/>
+
+                    <EditText
+                        android:id="@+id/edtPrice"
+                        android:hint="@string/hint_entity_price"
+                        style="@style/EditText"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1" />
+
+                </android.support.v7.widget.CardView>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>
