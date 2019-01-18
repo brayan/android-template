@@ -94,7 +94,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:maxLines">3</item>
-        <item name="android:textColor">@color/primaryListItemText</item>
+        <item name="android:textColor">@color/primaryTextListItem</item>
         <item name="android:textSize">@dimen/text_size_small</item>
     </style>
 
@@ -102,7 +102,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:maxLines">3</item>
-        <item name="android:textColor">@color/secondaryListItemText</item>
+        <item name="android:textColor">@color/secondaryTextListItem</item>
         <item name="android:textSize">@dimen/text_size_xsmall</item>
     </style>
 

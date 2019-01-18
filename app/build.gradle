@@ -21,19 +21,16 @@ android {
         }
     }
 
+    dataBinding {
+        enabled = true
+    }
+
     productFlavors {
         production {}
         experiments {
             applicationIdSuffix ".experiments"
             flavorDimensions "default"
         }
-    }
-
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-        main.java.srcDirs += [file("$buildDir/generated/source/kapt/main")]
-        test.java.srcDirs += 'src/test/kotlin'
-        androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
 
     testOptions {
@@ -58,11 +55,15 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$appCompat_version"
     implementation "com.android.support:design:$appCompat_version"
     implementation "com.android.support.constraint:constraint-layout:$coordinator_version"
-    implementation "joda-time:joda-time:$joda_version"
-    implementation "android.arch.persistence.room:runtime:$room_version"
-    implementation "android.arch.paging:runtime:$paging_version"
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
     implementation "com.google.dagger:dagger:$dagger_version"
     implementation "com.google.firebase:firebase-core:$firebaseCore_version"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    implementation "android.arch.paging:runtime:$paging_version"
+    implementation project(':domain')
+    implementation project(':data')
     testImplementation "junit:junit:$junit_version"
     testImplementation "org.mockito:mockito-core:$mockito_version"
     testImplementation "org.robolectric:robolectric:$robolectric_version"

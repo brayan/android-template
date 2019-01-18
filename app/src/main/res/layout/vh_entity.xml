@@ -30,14 +30,14 @@
 
     <TextView
         android:id="@+id/txtPrice"
-        app:layout_constraintEnd_toStartOf="@id/txtQuantity"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescription"
         style="@style/ListItemTextViewCurrency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txtQuantity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescription"
         tools:text="R$ 1.000,00" />
 
     <TextView
@@ -47,7 +47,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="10" />
-
 
 
 </android.support.constraint.ConstraintLayout>
